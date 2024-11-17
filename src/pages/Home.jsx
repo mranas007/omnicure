@@ -55,8 +55,8 @@ const Home = () => {
                         <Button text="World's leading USA hospitals" style="bg-primary-dark text-primary-light text-[9px] md:text-xs" />
                     </div>
 
-                    <img src="./assets/image/doctor.png" alt="image Loading..." className='rounded-[30px]' />
-                    <img src="./assets/image/mask_group.png" alt="image Loading..." className='absolute top-8 right-8 w-20 md:w-40 mdtop-10 md:right-10' />
+                    <img src="/assets/images/png/doctor.png" alt="image Loading..." className="rounded-[30px]" />
+                    <img src="/assets/images/png/mask_group.png" alt="image Loading..." className="absolute top-8 right-8 w-20 md:w-40 md:top-10 md:right-10" />
 
                     <div className='w-24 md:w-36 absolute top-[120px] md:top-[250px] lg:top-[320px] right-[-30px] md:right-[-65px]'>
                         <Button text="52 countries Reached" style="bg-primary-dark text-primary-light text-[8px] sm:text-[10px] md:text-xs" />
@@ -73,7 +73,7 @@ const Home = () => {
 
                         {/* Cards */}
                         {cardDetails.map((val) => {
-                           return <Card icon={val.icon} heading={val.heading} paragraph={val.paragraph} />
+                            return <Card icon={val.icon} heading={val.heading} paragraph={val.paragraph} />
                         })}
 
                     </div>
