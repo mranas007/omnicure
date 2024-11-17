@@ -9,7 +9,7 @@ const Header = () => {
         <header className='relative w-full h-20 flex justify-between items-center px-10 bg-primary z-50'>
             {/* Logo Section */}
             <div className='sm:w-28 w-'>
-                <img src="/src/assets/image/png/navbar-logo.png" alt="Logo..." />
+                <img src="/assets/image/png/navbar-logo.png" alt="Logo..." />
             </div>
 
             {/* Navigation Menu */}
