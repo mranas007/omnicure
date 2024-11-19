@@ -5,7 +5,7 @@ const PlansCard = ({ gradiant, heading, time, price_month, features }) => {
     return (
         <div
             className={`inset-0 ${gradiant} from-primary-light/5 to-transparent | 
-            p-8 sm:w-[370px] rounded-2xl backdrop-blur-lg relative overflow-hidden`}
+            p-8 lg:w-[370px] rounded-2xl backdrop-blur-lg relative overflow-hidden`}
         >
             <div className="relative z-10">
                 <h1 className="mb-2 font-semibold text-white">{heading}</h1>

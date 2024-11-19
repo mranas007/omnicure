@@ -3,6 +3,8 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 import LogoCard from '../components/LogoCard';
 import PlansCard from '../components/PlansCard';
+import DoctorCard from '../components/DoctorCard';
+import Input from '../components/Input';
 
 const Home = () => {
 
@@ -55,6 +57,68 @@ const Home = () => {
         },
     ]);
 
+    const [TreatmentTypes, setTreatmentTypes] = useState([
+        {
+            url: "/assets/images/logos/treatment-1.png",
+            text: "Oncology"
+        },
+        {
+            url: "/assets/images/logos/treatment-2.png",
+            text: "Endocrinology"
+        },
+        {
+            url: "/assets/images/logos/treatment-3.png",
+            text: "Infertility"
+        },
+        {
+            url: "/assets/images/logos/treatment-4.png",
+            text: "Mental Health"
+        },
+        {
+            url: "/assets/images/logos/treatment-5.png",
+            text: "Cardiology"
+        },
+        {
+            url: "/assets/images/logos/treatment-6.png",
+            text: "Neurology "
+        },
+        {
+            url: "/assets/images/logos/treatment-7.png",
+            text: "Rheumatology"
+        },
+        {
+            url: "/assets/images/logos/treatment-8.png",
+            text: "Plastic Surgery "
+        },
+        {
+            url: "/assets/images/logos/treatment-9.png",
+            text: "Rare Diseases"
+        },
+        {
+            url: "/assets/images/logos/treatment-10.png",
+            text: "Surrogacy"
+        }
+    ])
+
+    const [doctorsList, setDoctorsList] = useState([
+        {
+            url: "/assets/images/png/doctor-1.png",
+            text: "Dr. Wade Warren"
+        },
+        {
+            url: "/assets/images/png/doctor-2.png",
+            text: "Dr. Guy Hawkins"
+        },
+        {
+            url: "/assets/images/png/doctor-3.png",
+            text: "Dr. Cameron Williamson"
+        },
+        {
+            url: "/assets/images/png/doctor-4.png",
+            text: "Dr. Leslie Alexander"
+        },
+    ])
+
     return (
         <>
             <section>
@@ -81,23 +145,23 @@ const Home = () => {
 
                 {/* Dr Image */}
                 <div
-                    className='w-[70%] md:max-w-screen-md absolute top-[550px] md:top-[500px] left-1/2 transform -translate-x-1/2 rounded-[40px] bg-primary-light bg-opacity-25 p-2.5 md:p-5 z-0'
+                    className='w-[73%] md:max-w-screen-md absolute top-[550px] md:top-[500px] left-1/2 transform -translate-x-1/2 rounded-[40px] bg-primary-light bg-opacity-25 p-2.5 md:p-5 z-0'
                     style={{ boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.3)' }}>
 
                     <div className='w-24 md:w-36 absolute top-[70px] md:top-[200px] left-[-50px] md:left-[-65px]'>
-                        <Button text="World's leading USA hospitals" style="bg-primary-dark text-primary-light px-3 h-9 min-w-16 md:h-12 md:px-5 md:min-w-28 text-[8px] sm:text-[10px] md:text-xs" />
+                        <Button text="World's leading USA hospitals" style="bg-primary-dark text-primary-light text-[0.6rem] sm:text-[10px] md:text-xs" />
                     </div>
 
                     <img src="/assets/images/png/doctor.png" alt="image Loading..." className="rounded-[30px]" />
                     <img src="/assets/images/png/mask_group.png" alt="image Loading..." className="absolute top-5 right-5 w-16 md:w-40 md:top-10 md:right-10" />
 
                     <div className='w-24 md:w-36 absolute top-[80px] md:top-[250px] lg:top-[320px] right-[-35px] md:right-[-65px]'>
-                        <Button text="52 countries Reached" style="bg-primary-dark text-primary-light px-3 h-9 min-w-16 md:h-12 md:px-5 md:min-w-28 text-[8px] sm:text-[10px] md:text-xs" />
+                        <Button text="52 countries Reached" style="bg-primary-dark text-primary-light text-[0.6rem] sm:text-[10px] md:text-xs" />
                     </div>
                 </div>
 
                 <div className='max-w-[1200px] mx-auto flex flex-col justify-center mt-[130px] md:mt-[500px] '>
-                    <div className='w-full flex justify-center flex-col md:flex-row gap-10 px-16'>
+                    <div className='w-full flex justify-center flex-col md:flex-row gap-10 px-10 md:px-16'>
                         <h1 className='text-primary md:w-[45%] text-xl md:text-3xl font-mono'>Experiance Exeptional Healthcare in the USA with Omnicure USA</h1>
                         <p className='text-zinc-600 md:w-[45%] text-md'>Discover the pinnacle of healthcare services in the United States, where advancements, quality, cutting edge research, expert doctors and a commitment to patient success, combine to provide an unparalleled medical tourism experience. Omnicure USA is your dedicated partner, guiding you towards improved health and wellness. Connect with us today and embark on a journey of exceptional USA healthcare services.</p>
                     </div>
@@ -128,7 +192,7 @@ const Home = () => {
 
                 {/* World Best hospitals */}
                 <div className='w-full my-16 md:my-36 py-5'>
-                    <div className='w-full md:w-[900px] md:mx-auto p-5 flex gap-12 md:gap-4 flex-col md:flex-row items-center justify-between'>
+                    <div className='w-full lg:w-[900px] md:mx-auto p-5 flex gap-12 md:gap-4 flex-col md:flex-row items-center justify-between'>
 
                         <div className='flex gap-2 justify-center md:justify-start w-full md:w-[40%] '>
                             <div className='flex flex-col gap-2  mt-[20px]'>
@@ -149,23 +213,84 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='w-[85%] md:w-[40%] text-center md:text-start'>
-                            <h1 className='text-primary text-xl md:text-3xl font-semibold font-mono'>World’s Best USA Hospitals & Research Centers</h1>
+                        <div className='w-[80%] md:w-[40%] text-center md:text-start'>
+                            <h1 className='text-primary text-xs md:text-3xl font-semibold font-mono'>World’s Best USA Hospitals & Research Centers</h1>
                         </div>
                     </div>
                 </div>
 
 
                 {/* plans */}
-                <div className='w-full flex flex-col justify-center min-h-screen bg-primary-dark py-20 p-5'>
+                <div className='w-full flex flex-col justify-center  bg-primary-dark py-20 p-5'>
                     <h1 className='text-xl md:text-3xl font-semibold text-primary-light text-center font-mono'>Global Plans</h1>
                     <p className='text-xs md:text-sm text-neutral-400 text-center my-5 md:my-8 max-w-[450px] mx-auto'>World’s Best USA Healthcare, Now Accessible and Affordable  with MediPocket Global Membership Plan</p>
-                    <div className='w-full md:w-[900px] md:mx-auto flex flex-col md:flex-row gap-6 md:gap-20 justify-center items-center'>
+                    <div className='w-full lg:w-[900px] md:mx-auto flex flex-col md:flex-row gap-6 md:gap-20 justify-center items-center'>
                         {plansDetails.map((val, index) => {
                             return <PlansCard key={index} {...val} />;
                         })}
                     </div>
                 </div>
+
+                <div className='w-full lg:w-[900px] md:mx-auto  p-5 py-10 md:py-20'>
+                    <h1 className='text-xl md:text-3xl font-semibold text-primary font-mono max-w-[300px] mb-6 ml-[5vw]'>Explore Treatments across specialties</h1>
+                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-3 justify-items-center place-items-center">
+                        {TreatmentTypes.map((val, i) => (
+                            <LogoCard
+                                key={i}
+                                url={val.url}
+                                text={val.text}
+                                imgStyle="w-7 md:w-12 mb-1"
+                                style="text-[10px] md:text-xs text-center mt-0 leading-3"
+                            />
+                        ))}
+                    </div>
+                </div>
+                {/* Worlds Top Doctors */}
+                <div className=' flex justify-center items-center flex-col gap-5 md:gap-10 w-full lg:w-[900px] md:mx-auto p-5 py-10 md:py-24'>
+                    <h1 className='text-xl md:text-3xl font-semibold text-primary font-mono mb-6 '>World’s Top Doctors</h1>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center gap-4 lg:gap-6'>
+                        {doctorsList.map((val, i) => (
+                            <div key={i} className={i % 2 === 0 ? 'lg:mt-[-30px]' : 'lg:mt-[30px]'}>
+                                <DoctorCard text={val.text} url={val.url} />
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+
+
+                <div className="grid place-items-center md:gap-10 w-full lg:w-[900px] md:mx-auto px-7 py-10 md:py-20">
+                    <div className="relative flex flex-col bg-[#EDECE8] rounded-3xl w-full max-w-[800px] overflow-hidden p-4 md:p-5">
+                        <h1 className="text-lg md:text-2xl font-semibold text-primary font-mono z-40 text-center md:text-start">
+                            Book A Free Consultation
+                        </h1>
+                        <div className="w-full h-auto md:w-[500px] flex flex-col gap-4 mt-8 z-40">
+                            {/* Inputs */}
+                            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                <Input type="text" placeholder="First Name" style="bg-opacity-50 w-full" />
+                                <Input type="text" placeholder="Last Name" style="bg-opacity-50 w-full" />
+                                <Input type="text" placeholder="Email ID" style="bg-opacity-50 w-full" />
+                                <Input type="number" placeholder="Mobile Number" style="bg-opacity-50 w-full" />
+                            </div>
+                            <div className="w-full grid gap-4">
+                                <Input type="text" placeholder="Country" style="bg-opacity-50 w-full" />
+                                <textarea
+                                    placeholder="Message"
+                                    className="w-full row-span-6 resize-none px-4 py-3 text-sm bg-primary-light bg-opacity-50 backdrop-blur-sm border border-stone-500 focus:outline-none rounded-3xl"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        {/* Adjust the image */}
+                        <img
+                            src="/assets/images/png/form-image.png"
+                            alt="images loading..."
+                            className="absolute top-0 right-0 w-[250px] md:w-[400px] lg:w-[500px] hidden md:block"
+                        />
+                        <Button text="Submit" style="w-full bg-primary-dark text-primary-light mt-6 md:mt-7 md:w-32 py-3 mx-auto md:mx-0 z-40" />
+                    </div>
+                </div>
+
 
             </section>
         </>
