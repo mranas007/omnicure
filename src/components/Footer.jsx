@@ -55,9 +55,8 @@ const Footer = () => {
 
                 <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-5 mt-10'>
                     <h2 className='text-sm text-neutral-300'>Email Address : mr.anas1003@gmail.com</h2>
-                    <p className='text-sm'>&copy; 2023 Omnicure USA. All Rights Reserved.</p>
+                    <p className='text-sm'>&copy; {new Date().getFullYear()} Omnicure USA. All Rights Reserved.</p>
                 </div>
-
 
             </section>
         </footer>
