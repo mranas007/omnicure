@@ -1,53 +1,8 @@
 # React + Vite
 
-# MediPocket Frontend Project
+# omnicure Frontend Project
 
-This is the frontend implementation of the **MediPocket** website. The project is designed to showcase a responsive and visually appealing interface for a healthcare platform. Note that this is a **frontend-only project** with no backend or functional features—it focuses purely on UI/UX design.
-
----
-
-## 🛠️ Built With
-- **React.js**: The core framework for building the user interface.
-- **React Toastify**: Used for creating classy and interactive alerts.
-- **Tailwind CSS**: For styling and layout.
-
----
-
-## 📂 Project Structure
-The project structure follows a simple and modular approach for easy understanding:
-
-- **`public/assets`**: Includes images, logos, and other static files used across the site.
-- **`src/components`**: Contains reusable React components like headers, buttons, and forms.
-- **`src/pages`**: Contains pages like Home.
-
----
-
-## ⚙️ How to Run the Project
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-
-## ⚙️ How to Run the Project
-```bash
-# Clone the repository
-git clone https://github.com/mranas007/omnicure.git
-
-# Navigate to the project directory
-cd omnicure
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
-
-Here’s the updated README.md with a proper copyable format:
-
-markdown
-Copy code
-# MediPocket Frontend Project
-
-This is the frontend implementation of the **MediPocket** website. The project is designed to showcase a responsive and visually appealing interface for a healthcare platform. Note that this is a **frontend-only project** with no backend or functional features—it focuses purely on UI/UX design.
+This project demonstrates the frontend design and functionality of a modern healthcare-related website. The project is designed to showcase a responsive and visually appealing interface for a healthcare platform. Note that this is a **frontend-only project** with no backend or functional features—it focuses purely on UI/UX design.
 
 ---
 
@@ -69,6 +24,7 @@ The project structure follows a simple and modular approach for easy understandi
 ---
 
 ## ⚙️ How to Run the Project
+
 ```bash
 # Clone the repository
 git clone https://github.com/mranas007/omnicure.git
@@ -77,13 +33,15 @@ git clone https://github.com/mranas007/omnicure.git
 cd medi-pocket-frontend
 
 # Install dependencies
-npm install
+npm i
 
 # Start the development server
-npm start
-Open the project in your browser:
--- http://localhost:5173
+npm run dev
 
+# Open the project in your browser:
+http://localhost:5173
+
+```
 
 ## 💡 Features of the UI
 - Responsive design suitable for desktop and mobile devices.
