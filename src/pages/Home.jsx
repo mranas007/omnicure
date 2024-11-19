@@ -240,7 +240,7 @@ const Home = () => {
                                 url={val.url}
                                 text={val.text}
                                 imgStyle="w-7 md:w-12 mb-1"
-                                style="text-[0.7rem] md:text-xs text-center mt-0 leading-3"
+                                style="text-[0.8rem] md:text-xs text-center mt-0 leading-3"
                             />
                         ))}
                     </div>
