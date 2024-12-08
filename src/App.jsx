@@ -1,10 +1,12 @@
 import React from 'react'
 import Home from './pages/Home'
-
+import { ContextProvider } from "./context/Context";
 const App = () => {
   return (
     <>
-      <Home />
+      <ContextProvider>
+        <Home />
+      </ContextProvider>
     </>
   )
 }

@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import LogoCard from '../components/LogoCard';
 import PlansCard from '../components/PlansCard';
 import DoctorCard from '../components/DoctorCard';
 import Input from '../components/Input';
-import { toast } from 'react-toastify';
 
 // Local Json Data
 import CardsDetails from '../json/CardsDetails';
@@ -14,71 +13,6 @@ import TreatmentTypes from '../json/TreatmentTypes';
 import DoctorsList from '../json/DoctorsList';
 
 const Home = () => {
-
-    const toastUp = (val) => {
-        toast.info(val, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "colored",
-        });
-    }
-
-    const [i, setI] = useState(1);
-    const notify = () => {
-        switch (i) {
-            case 1:
-                toastUp("Oops! Looks like this button is just here to look pretty. 🚧");
-                setI(i + 1);
-                break;
-
-            case 2:
-                toastUp("Hey there, just a placeholder—nothing happening here! 🎭");
-                setI(i + 1);
-                break;
-
-            case 3:
-                toastUp("Hold up! This feature is taking a little nap. Maybe try again later? ✋");
-                setI(i + 1);
-                break;
-
-            case 4:
-                toastUp("Looks like this button is off-duty today!🛑",);
-                setI(i + 1);
-                break;
-
-            case 5:
-                toastUp("Whoa, nothing to see here—just keep exploring the other buttons! 🌀");
-                setI(i + 1);
-                break;
-
-            case 6:
-                toastUp("Oh, you found a button! Too bad it’s not doing anything… yet! 🎈");
-                setI(i + 1);
-                break;
-
-            case 7:
-                toastUp("Missing a piece? This button is more for style than action. 🧩");
-                setI(i + 1);
-                break;
-
-            case 8:
-                toastUp("Clicking this won’t unlock any secrets, but nice try! ✨");
-                setI(i + 1);
-                break;
-
-            case 9:
-                toastUp("You pressed it! And… that’s it. But it does look cool, doesn’t it? 🕹️");
-                setI(i + 1);
-                break;
-
-            default:
-                toastUp("Alright, you win! You've clicked enough times to earn a gold star... but still, nothing happens! 🎉");
-        }
-    };
 
     return (
         <>
@@ -99,7 +33,7 @@ const Home = () => {
                                 placeholder='Search diseases, hospitals, countries'
                             />
                         </div>
-                        <div onClick={notify}>
+                        <div>
                             <Button text="Explore Premium Core" style="bg-primary-light text-primary w-full" />
                         </div>
                     </div>
@@ -131,8 +65,8 @@ const Home = () => {
                     <div className=' w-full flex flex-col gap-8 md:gap-2 md:flex-row justify-between items-center py-20 px-24'>
 
                         {/* Cards */}
-                        {CardsDetails.map((val) => {
-                            return <Card icon={val.icon} heading={val.heading} paragraph={val.paragraph} />
+                        {CardsDetails.map((val, index) => {
+                            return <Card key={index} icon={val.icon} heading={val.heading} paragraph={val.paragraph} />
                         })}
 
                     </div>
@@ -143,13 +77,13 @@ const Home = () => {
                     <div className='relative w-[80%] md:w-[900px] h-[280px] md:h-[300px] flex flex-col md:flex-row  items-center bg-primary-dark rounded-3xl p-6'>
                         <div className='w-full md:w-[50%] md:pl-6'>
                             <h1 className='text-primary-light text-2xl md:text-4xl mb-5'>Teleconsult Our Patient Advisors</h1>
-                            <div onClick={notify}>
+                            <div>
                                 <Button text="Book a Call" style="bg-primary-light text-primary-dark min-w-24 h-10" />
                             </div>
                         </div>
                         <div >
                             <img src="/assets/images/png/consulting.png" className='w-[45%] md:w-[35%] absolute right-8 md:right-16 bottom-0' alt="Image Loading..." />
-                            <i class="fa-solid fa-phone | bg-slate-500 bg-opacity-20 text-primary-light text-xl md:text-5xl z-10 absolute right-[47%] md:right-64 bottom-[20%] md:bottom-24 p-2 px-3 md:p-6 backdrop-blur-md rounded-full"></i>
+                            <i className="fa-solid fa-phone | bg-slate-500 bg-opacity-20 text-primary-light text-xl md:text-5xl z-10 absolute right-[47%] md:right-64 bottom-[20%] md:bottom-24 p-2 px-3 md:p-6 backdrop-blur-md rounded-full"></i>
                         </div>
                     </div>
                 </div>
@@ -251,12 +185,11 @@ const Home = () => {
                             alt="images loading..."
                             className="absolute top-0 right-0 w-[250px] md:w-[400px] lg:w-[500px] hidden md:block"
                         />
-                        <div onClick={notify}>
+                        <div>
                             <Button text="Submit" style="w-full bg-primary-dark text-primary-light mt-6 md:mt-7 md:w-32 py-3 mx-auto md:mx-0 z-40" />
                         </div>
                     </div>
                 </div>
-
 
             </section>
         </>

@@ -16,7 +16,7 @@ const Header = () => {
                 {/* Navigation Menu */}
                 <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-                {/* Button Section */}
+                {/* Desktop Button */}
                 <div className='hidden md:block'>
                     <Button text="Book Now" style="bg-primary-light text-primary" />
                 </div>
